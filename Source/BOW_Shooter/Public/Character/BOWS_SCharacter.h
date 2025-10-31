@@ -3,8 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "BOWS_SCharacter.generated.h"
+
+class UCameraComponent;
+class USpringArmComponent;
 
 UCLASS()
 class BOW_SHOOTER_API ABOWS_SCharacter : public ACharacter
@@ -16,6 +21,10 @@ public:
 	ABOWS_SCharacter();
 
 protected:
+	USpringArmComponent* SpringArmComp;
+	
+	UCameraComponent* CameraComp; //3th person camera component
+	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
