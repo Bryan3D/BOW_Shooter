@@ -21,8 +21,10 @@ public:
 	ABOWS_SCharacter();
 
 protected:
+	UPROPERTY(visibleAnywhere)
 	USpringArmComponent* SpringArmComp;
 	
+	UPROPERTY(visibleAnywhere)
 	UCameraComponent* CameraComp; //3th person camera component
 	
 	// Called when the game starts or when spawned
