@@ -23,12 +23,19 @@ public:
 protected:
 	UPROPERTY(visibleAnywhere)
 	USpringArmComponent* SpringArmComp;
+
+	
+	
 	
 	UPROPERTY(visibleAnywhere)
 	UCameraComponent* CameraComp; //3th person camera component
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	void MoveForward(float Value);
+	
+	
 
 public:	
 	// Called every frame
